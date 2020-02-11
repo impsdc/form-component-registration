@@ -1,0 +1,29 @@
+{
+  "name": "devlab-elearning-front",
+  "version": "1.0.0",
+  "description": "NUXTJS DEVLAB ELEARNING PROJECT",
+  "author": "Antoine LOZACH, Mathieu RICHARD, Rémi GUILLARD, Miguel MOLANO, Paul SANTAMARIA, Florent TROUILLET",
+  "private": false,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.3.4",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.16.4",
+    "sass-loader": "^8.0.0",
+    "webpack-cli": "^3.3.10"
+  }
+}
