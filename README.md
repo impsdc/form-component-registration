@@ -1,5 +1,7 @@
 # devlab-elearning-front
 
+Lien du forum avec posiblement la solution à l'erreur : 
+https://stackoverflow.com/questions/49052113/avoid-mutating-a-prop-vuejs-2
 > NUXTJS DEVLAB ELEARNING PROJECT
 
 ## Build Setup
