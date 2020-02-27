@@ -48,7 +48,7 @@
                         Forgot Password ?
                     </a>
                     <span class="bg-uptoblack w-56"></span>
-                    <input class="shadow bg-uptoblue border-1 border-uptoblue hover:bg-transparent hover:text-uptoblue focus:shadow-outline focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer" type="submit" value="Connect">         
+                    <input class="shadow bg-uptoblue border-1 border-uptoblue hover:bg-transparent hover:text-uptoblue focus:shadow-outline focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer" type="submit" value="Se connecter">         
                 </div>    
               </div>
             </form>
@@ -58,9 +58,9 @@
                 <p class="p-3">Pour rester connecté veuillez 
                   entrer vos informations personnelles</p>
               </div>
-              <div class="">
+              <div class="h-24 flex flex-col justify-between">
                 <p class="p-2">Pas de compte ?</p>
-                <button @click="mico()" class="shadow bg-uptoblue border-1 border-white hover:bg-transparent hover:bg-white hover:text-uptoblue focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer"> s'inscrire
+                <button @click="change" class="shadow bg-uptoblue border-1 border-white hover:bg-transparent hover:bg-white hover:text-uptoblue focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer">S'inscrire
                 </button>
               </div>
                 
@@ -77,23 +77,13 @@ export default {
     fields
   },
   props: {
-      action:{
-          type:String,
-      },
-      pwdLink: {
-          type:String
-      }, 
-      seen:{
-        type:Boolean
-      }
-  },
-  data(){
-    return{ischecked: this.seen}
+      action:{type:String,},
+      pwdLink: { type:String},
   },
   methods : {
-     mico: function (){
-        this.ischecked = !this.ischecked
-      }
+    change: function ()  {
+      this.$emit('changePlz')
+    }
   }
 }
 

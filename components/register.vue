@@ -54,9 +54,8 @@
               </template>
             </fields>
             <div class="flex flex-col mb-6 flex-row items-center forgot" >
-
               <span class="bg-uptoblack w-56"></span>
-              <nuxt-link to="/admin" class="shadow bg-uptoblue border-1 border-white hover:bg-transparent hover:bg-white hover:text-uptoblue  focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer">Connect</nuxt-link>
+              <nuxt-link to="/admin" class="shadow bg-uptoblue border-1 border-white hover:bg-transparent hover:bg-white hover:text-uptoblue  focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer">S'inscrire</nuxt-link>
             </div>
           </div>
         </form>
@@ -67,14 +66,11 @@
             <p class="p-3">Entrer vos infos personnelles et
               commencer à apprendre dès maintenant !</p>
           </div>
-          <div class="">
+          <div class="h-24 flex flex-col justify-between">
             <p class="p-2 font-bold">Déjà un compte ?</p>
-            <nuxt-link to="/" class="shadow bg-uptoblue border-1 border-white hover:bg-transparent hover:bg-white hover:text-uptoblue  focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer">Connexion</nuxt-link>
-
-
-
+              <button @click="change" class="shadow bg-uptoblue border-1 border-white hover:bg-transparent hover:bg-white hover:text-uptoblue focus:outline-none text-white font-bold py-2 px-5 rounded-full cursor-pointer">Se connecter
+              </button>
           </div>
-
         </div>
       </div>
     </div>
@@ -97,18 +93,11 @@
       pwdLink: {
         type:String
       },
-      seen:{
-        type:Boolean
-      }
-    },
-    data() {
-      return {
-      }
     },
    methods : {
-     mico: function (){
-        this.seen = !this.seen
-      }
+      change: function ()  {
+      this.$emit('changePlz')
+    }
   }
   }
 </script>

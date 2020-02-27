@@ -6,6 +6,7 @@
       :seen="seen"
       action="admin/"
       pwdLink="admin/"
+      @changePlz="mico()"
       >
         <template slot="title">
           <h1 class="text-4xl font-semibold text-center text-uptoblue">Connexion Up2You</h1>
@@ -15,6 +16,7 @@
       <register v-else
       action="admin/"
       pwdLink="admin/"
+      @changePlz="mico()"
       >
       <template slot="title">
           <h1 class="text-4xl font-semibold text-center text-uptoblue">Inscription Up2You</h1>
@@ -38,7 +40,9 @@
   },
   data(){
     return{
-      
+      mico: function (){
+        this.seen = !this.seen
+      }
     }
   }
      
